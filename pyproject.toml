@@ -1,6 +1,6 @@
 [project]
 name = "mac-roman-decoder"
-version = "0.1.1"
+version = "0.1.2"
 description = "Decodes and encodes using the Mac Roman character set, the default encoding for classic Mac OS."
 requires-python = ">=3.10"
 dependencies = []
