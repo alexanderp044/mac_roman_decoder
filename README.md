@@ -34,3 +34,10 @@ This library wraps the standard `mac_roman` codec with a tested, lenient error p
 - `MacRomanDecoder` — class with `encode(text: str) -> bytes` and `decode(data: bytes) -> str`.
 - `encode_mac_roman(text: str) -> bytes` — module-level encoder.
 - `decode_mac_roman(data: bytes) -> str` — module-level decoder.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
